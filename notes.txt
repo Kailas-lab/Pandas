@@ -1,0 +1,59 @@
+What is a Series?
+A Pandas Series is like a column in a table.
+It is a one-dimensional array holding data of any type.
+What is a DataFrame?
+A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
+Empty Cells
+Empty cells can potentially give you a wrong result when you analyze data.
+
+Remove Rows
+One way to deal with empty cells is to remove rows that contain empty cells.
+This is usually OK, since data sets can be very big, and removing a few rows will not have a big impact on the result.
+Note: By default, the dropna() method returns a new DataFrame, and will not change the original.
+
+Note: Now, the dropna(inplace = True) will NOT return a new DataFrame, but it will remove all rows containing NULL values from the original DataFrame.
+
+Replace Empty Values
+Another way of dealing with empty cells is to insert a new value instead.
+This way you do not have to delete entire rows just because of some empty cells.
+The fillna() method allows us to replace empty cells with a value:
+
+
+Replace Only For Specified Columns
+The example above replaces all empty cells in the whole Data Frame.
+To only replace empty values for one column, specify the column name for the DataFrame:
+
+
+Mean = the average value (the sum of all values divided by number of values).
+Median = the value in the middle, after you have sorted all values ascending.
+Mode = the value that appears most frequently.
+
+
+Replacing Values
+One way to fix wrong values is to replace them with something else.
+
+
+Correlation used for prediction:
+Correlation is a statistical measure that describes the strength and direction of a relationship between two variables. It is commonly used to understand how one variable might predict or influence another.
+Real-Time Example: Temperature and Ice Cream Sales
+Imagine you run an ice cream shop and are curious about how the weather affects your sales. You collect data on daily temperature and the number of ice creams sold. Here's how correlation would help you understand this relationship:
+Collecting Data:
+Temperature (°C): 20, 22, 24, 26, 28, 30, 32, 34
+Ice Cream Sales: 100, 120, 150, 180, 200, 220, 250, 270
+Calculating Correlation:
+You calculate the correlation between temperature and ice cream sales using a formula or software (like Pandas in Python).
+Suppose the correlation coefficient comes out to be +0.95.
+Interpreting the Correlation:
+A positive correlation of +0.95 indicates a strong positive relationship between temperature and ice cream sales. This means that as the temperature increases, ice cream sales tend to increase as well.
+
+
+
+
+Breaking Down the Correlation:
+Value of Correlation Coefficient:
++1: Perfect positive correlation (e.g., temperature rises → ice cream sales rise proportionally).
+-1: Perfect negative correlation (e.g., temperature rises → ice cream sales fall proportionally).
+0: No correlation (e.g., temperature has no effect on ice cream sales).
+
+
+
